@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="__0_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HjV-5c-rvT">
+                                <rect key="frame" x="107" y="423" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Gh1-GB-nLt"/>
+                                    <constraint firstAttribute="height" constant="50" id="yqC-eE-7lQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tkc-WA-mXr">
+                                <rect key="frame" x="152.5" y="513" width="109" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="139-5P-JFM"/>
+                                    <constraint firstAttribute="height" constant="40" id="o2W-46-88w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="Отправить">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gdn-xY-DZm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2l-pQ-dWT">
+                                <rect key="frame" x="191.5" y="563" width="31" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="␡">
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lgG-1g-COY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Привет! Как тебя зовут?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTW-ap-3R5">
+                                <rect key="frame" x="98.5" y="369" width="217.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HjV-5c-rvT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ANX-92-kQT"/>
+                            <constraint firstItem="HjV-5c-rvT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ptj-h6-coD"/>
+                            <constraint firstItem="HjV-5c-rvT" firstAttribute="top" secondItem="hTW-ap-3R5" secondAttribute="bottom" constant="30" id="Yfa-Jr-86U"/>
+                            <constraint firstItem="m2l-pQ-dWT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZCL-L1-BNm"/>
+                            <constraint firstItem="hTW-ap-3R5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bsb-aF-01D"/>
+                            <constraint firstItem="Tkc-WA-mXr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ehR-kD-H7h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hTW-ap-3R5" secondAttribute="trailing" id="g2D-vw-Fuh"/>
+                            <constraint firstItem="hTW-ap-3R5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ilB-mW-RNO"/>
+                            <constraint firstItem="m2l-pQ-dWT" firstAttribute="top" secondItem="Tkc-WA-mXr" secondAttribute="bottom" constant="10" id="mK3-iV-VNL"/>
+                            <constraint firstItem="Tkc-WA-mXr" firstAttribute="top" secondItem="HjV-5c-rvT" secondAttribute="bottom" constant="40" id="s6c-NN-KyM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="helloLabel" destination="hTW-ap-3R5" id="X4K-uc-Kf8"/>
+                        <outlet property="nameTextField" destination="HjV-5c-rvT" id="HEd-On-rWL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
