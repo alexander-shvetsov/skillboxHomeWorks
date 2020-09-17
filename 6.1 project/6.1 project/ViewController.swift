@@ -12,20 +12,28 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var numberField: UITextField!
+    
+    func getError() {
+        titleLabel.text = "Введите целое число в строку"
+        titleLabel.textColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+        numberField.text = ""
+    }
+    
+    func reset() {
+        numberField.text = ""
+        titleLabel.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+    }
 
-    @IBAction func calculateButton(_ sender: UIButton) {
+    @IBAction func calculateButton(_ sender: Any) {
         
         let value = numberField.text
         
-        if let intVal = Int(value ?? "") { // проверка на целое число
-            titleLabel.text = String(intVal * intVal) // light pow func
-            numberField.text = "" // reset
-            titleLabel.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1) // normal color
-        } else { // обработка ошибки ввода
-            titleLabel.text = "Введите целое число в строку"
-            titleLabel.textColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1) // error color
-            numberField.text = "" // reset
-        }
+        guard let val = UInt(value ?? "") else { return getError() }
+        
+        let fullValue = pow(2, Double(UInt(val)))
+        titleLabel.text = String(format: "%g", fullValue)
+        reset()
+        
     }
     
 }
