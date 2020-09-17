@@ -13,20 +13,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var helloLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     
-    var names = [String]() // array of peoples
-
-    @IBAction func sendButton(_ sender: UIButton) {
-        if let name = nameTextField.text, !name.isEmpty { // check
-            names.append(name) // add name
-            helloLabel.text = "Привет, \(names.joined(separator: " "))" // format
-            nameTextField.text = "" // reset input
-        }
+    var names: [String] = [] // array of peoples (по моему так даже читается лучше 🙂)
+    
+    @IBAction func sendButton(_ sender: Any) {
+        guard let name = nameTextField.text, !name.isEmpty else { return } // check
+        names.append(name) // add name
+        helloLabel.text = "Привет, \(names.joined(separator: " "))" // format
+        nameTextField.text = "" // reset input
     }
     
-    @IBAction func resetButton(_ sender: UIButton) { // clear
+    @IBAction func resetButton(_ sender: Any) { // clear
         nameTextField.text = ""
         helloLabel.text = "Привет! Как тебя зовут?"
-        names = [String]()
+        names = []
     }
     
 }
