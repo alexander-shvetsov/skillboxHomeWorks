@@ -56,15 +56,31 @@
 		CE96BEFC250CBDD900B44BD5 /* 6.2-learnProject */ = {
 			isa = PBXGroup;
 			children = (
+				CEA004042513769A003ECCF0 /* View */,
+				CEA00405251376A8003ECCF0 /* Controllers */,
 				CE96BEFD250CBDD900B44BD5 /* AppDelegate.swift */,
 				CE96BEFF250CBDD900B44BD5 /* SceneDelegate.swift */,
-				CE96BF01250CBDD900B44BD5 /* ViewController.swift */,
-				CE96BF03250CBDD900B44BD5 /* Main.storyboard */,
 				CE96BF06250CBDDB00B44BD5 /* Assets.xcassets */,
 				CE96BF08250CBDDB00B44BD5 /* LaunchScreen.storyboard */,
 				CE96BF0B250CBDDB00B44BD5 /* Info.plist */,
 			);
 			path = "6.2-learnProject";
+			sourceTree = "<group>";
+		};
+		CEA004042513769A003ECCF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE96BF03250CBDD900B44BD5 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEA00405251376A8003ECCF0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE96BF01250CBDD900B44BD5 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
