@@ -53,7 +53,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Применить"/>
                                 <connections>
-                                    <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zi7-XM-nWP"/>
+                                    <action selector="calculateButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="kGG-7A-qw6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYg-Ec-J2j">
@@ -61,7 +61,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="🔄"/>
                                 <connections>
-                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eb1-1c-HXh"/>
+                                    <action selector="resetButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="oec-kk-YvF"/>
                                 </connections>
                             </button>
                         </subviews>

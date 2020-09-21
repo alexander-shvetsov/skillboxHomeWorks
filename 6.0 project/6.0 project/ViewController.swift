@@ -15,14 +15,14 @@ class ViewController: UIViewController {
     
     var names: [String] = [] // array of peoples (по моему так даже читается лучше 🙂)
     
-    @IBAction func sendButton(_ sender: Any) {
+    @IBAction func sendButton() {
         guard let name = nameTextField.text, !name.isEmpty else { return } // check
         names.append(name) // add name
         helloLabel.text = "Привет, \(names.joined(separator: " "))" // format
         nameTextField.text = "" // reset input
     }
     
-    @IBAction func resetButton(_ sender: Any) { // clear
+    @IBAction func resetButton() { // clear
         nameTextField.text = ""
         helloLabel.text = "Привет! Как тебя зовут?"
         names = []

@@ -22,38 +22,34 @@ class ViewController: UIViewController {
         titleLabel.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
     }
     
-    func getError() {
+    func showError() {
         titleLabel.text = "Некорректная операция"
         titleLabel.textColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
     }
     
-    @IBAction func calculateButton(_ sender: Any) { // кнопка расчёта
+    @IBAction func calculateButton() {
         
         guard
-            let action = Operator(rawValue: operationValueTextField.text ?? ""),
+            // unwrap values from fields
             let firstValue = Double(firstValueTextField.text ?? ""),
-            let secondValue = Double(secondValueTextField.text ?? "") else { return getError() }
+            let secondValue = Double(secondValueTextField.text ?? ""),
+            // get data from Model
+            let calcSum = Operator(rawValue: "+"),
+            let calcSub = Operator(rawValue: "-"),
+            let calcMulti = Operator(rawValue: "*"),
+            let calcDiv = Operator(rawValue: "/") else { return showError() }
         
-        enum Operator: String {
-            case sum = "+"
-            case sub = "-"
-            case multi = "*"
-            case division = "/"
-            
-            static func apply(_ a: Double, _ b: Double, controller: Operator) -> Double {
-                switch controller {
-                case .sum: return a + b
-                case .sub: return a - b
-                case .multi: return a * b
-                case .division: return a / b
-                }
-            }
+        switch operationValueTextField.text {
+        case "+": return titleLabel.text = String(format: "%g", calcSum.apply(firstValue, secondValue))
+        case "-": return titleLabel.text = String(format: "%g", calcSub.apply(firstValue, secondValue))
+        case "*": return titleLabel.text = String(format: "%g", calcMulti.apply(firstValue, secondValue))
+        case "/": return titleLabel.text = String(format: "%g", calcDiv.apply(firstValue, secondValue))
+        default: showError()
         }
         
-        titleLabel.text = String(format: "%g", Operator.apply(firstValue, secondValue, controller: action))
     }
     
-    @IBAction func resetButton(_ sender: Any) { // сброс данных
+    @IBAction func resetButton() { // сброс данных
         resetFields()
         titleLabel.text = "Калькулятор"
     }
