@@ -33,19 +33,10 @@ class ViewController: UIViewController {
             // unwrap values from fields
             let firstValue = Double(firstValueTextField.text ?? ""),
             let secondValue = Double(secondValueTextField.text ?? ""),
-            // get data from Model
-            let calcSum = Operator(rawValue: "+"),
-            let calcSub = Operator(rawValue: "-"),
-            let calcMulti = Operator(rawValue: "*"),
-            let calcDiv = Operator(rawValue: "/") else { return showError() }
+            let operatorValue = operationValueTextField.text,
+            let op = Operator(rawValue: operatorValue) else { return showError() }
         
-        switch operationValueTextField.text {
-        case "+": return titleLabel.text = String(format: "%g", calcSum.apply(firstValue, secondValue))
-        case "-": return titleLabel.text = String(format: "%g", calcSub.apply(firstValue, secondValue))
-        case "*": return titleLabel.text = String(format: "%g", calcMulti.apply(firstValue, secondValue))
-        case "/": return titleLabel.text = String(format: "%g", calcDiv.apply(firstValue, secondValue))
-        default: showError()
-        }
+        titleLabel.text = String(format: "%g", op.apply(firstValue, secondValue))
         
     }
     

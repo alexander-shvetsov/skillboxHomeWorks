@@ -15,12 +15,11 @@ enum Operator: String {
     case division = "/"
     
     func apply(_ a: Double, _ b: Double) -> Double {
-        switch self.rawValue {
-        case "+": return a + b
-        case "-": return a - b
-        case "*": return a * b
-        case "/": return a / b
-        default: return 0
+        switch self {
+        case .sum: return a + b
+        case .sub: return a - b
+        case .multi: return a * b
+        case .division: return a / b
         }
     }
 }
