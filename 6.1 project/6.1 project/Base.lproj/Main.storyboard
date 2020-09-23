@@ -36,7 +36,7 @@
                                 <rect key="frame" x="168.5" y="478" width="77" height="30"/>
                                 <state key="normal" title="Отправить"/>
                                 <connections>
-                                    <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nbd-XM-l8y"/>
+                                    <action selector="calculateButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="B2n-6D-hSA"/>
                                 </connections>
                             </button>
                         </subviews>
