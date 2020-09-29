@@ -17,13 +17,14 @@ class EmbedViewController: UIViewController {
 
     var delegate: ChangeBackgroundDelegate?
     
-    @IBAction func backgroundSetButton(_ sender: UIButton) {
+    @IBAction func changeBackground(_ sender: UIButton) {
         
-        // получаем идентификатор кнопки
-        guard let isPressedButton = sender.currentTitle else { return }
+        // получаем цвет c сопоставлением: идентификатор кнопки с моделью (Model/Colors)
+        guard let settedBackground = Colors(rawValue: sender.tag) else { return }
         
-        // передаём значение выбранного цвета
-        delegate?.setBackground(getBackground(from: isPressedButton))
+        /* передаём значение выбранного цвета,
+        с сопоставлением идентификатора кнопки с моделью фона из (Model/Colors) */
+        delegate?.setBackground(settedBackground.background)
         
     }
     

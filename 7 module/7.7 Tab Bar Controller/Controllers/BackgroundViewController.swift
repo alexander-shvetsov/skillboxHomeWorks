@@ -18,14 +18,14 @@ class BackgroundViewController: UIViewController {
         vc.delegate = self
     }
     
-    @IBAction func backgroundSetButton(_ sender: UIButton) {
+    @IBAction func changeBackground(_ sender: UIButton) {
         
-        // получаем идентификатор кнопки
-        guard let isPressedButton = sender.currentTitle else { return }
+        // получаем цвет c сопоставлением: идентификатор кнопки с моделью (Model/Colors)
+        guard let settedBackground = Colors(rawValue: sender.tag) else { return }
         
-        /* применяем метод сопоставления из модели (Model/Background),
-        относительно полученного идентификатора кнопки */
-        embedVC?.view.backgroundColor = getBackground(from: isPressedButton)
+        /* передаём значение выбранного цвета,
+         с сопоставлением идентификатора кнопки с моделью фона из (Model/Colors) */
+        embedVC?.view.backgroundColor = settedBackground.background
         
     }
     

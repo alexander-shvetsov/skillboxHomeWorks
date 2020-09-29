@@ -10,15 +10,15 @@ import UIKit
 
 class ColorViewController: UIViewController {
     
-    var titleValue = "Выбран зелёный" // default value
-    
     @IBOutlet weak var titleLabel: UILabel!
     
     /* объявляем, что если мы переходим на экран выбора цвета, передаём ему title,
      наследуем новое значение тайтла, при выборе нового цвета */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let changeColorVC = segue.destination as? ChangeColorViewController else { return }
-        changeColorVC.settedColor = titleLabel.text!
+        guard
+            let changeColorVC = segue.destination as? ChangeColorViewController,
+            let titleValue = titleLabel.text else { return }
+        changeColorVC.settedColor = titleValue
         changeColorVC.delegate = self
     }
     

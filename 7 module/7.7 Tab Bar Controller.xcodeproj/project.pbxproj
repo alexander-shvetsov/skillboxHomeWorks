@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CE21D951251B3C79000A1A6F /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21D950251B3C79000A1A6F /* BackgroundViewController.swift */; };
 		CE21D953251B3CCD000A1A6F /* EmbedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21D952251B3CCD000A1A6F /* EmbedViewController.swift */; };
-		CE21D955251B425E000A1A6F /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21D954251B425E000A1A6F /* Background.swift */; };
 		CEA003E525131BCC003ECCF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA003E425131BCC003ECCF0 /* AppDelegate.swift */; };
 		CEA003E725131BCC003ECCF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA003E625131BCC003ECCF0 /* SceneDelegate.swift */; };
 		CEA003EC25131BCC003ECCF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA003EA25131BCC003ECCF0 /* Main.storyboard */; };
@@ -23,7 +22,6 @@
 /* Begin PBXFileReference section */
 		CE21D950251B3C79000A1A6F /* BackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
 		CE21D952251B3CCD000A1A6F /* EmbedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbedViewController.swift; sourceTree = "<group>"; };
-		CE21D954251B425E000A1A6F /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		CEA003E125131BCC003ECCF0 /* 7.7 Tab Bar Controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "7.7 Tab Bar Controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA003E425131BCC003ECCF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEA003E625131BCC003ECCF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				CEFBCB012519F41100341DB9 /* Colors.swift */,
-				CE21D954251B425E000A1A6F /* Background.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,7 +177,6 @@
 				CE21D951251B3C79000A1A6F /* BackgroundViewController.swift in Sources */,
 				CEFBCB022519F41100341DB9 /* Colors.swift in Sources */,
 				CE21D953251B3CCD000A1A6F /* EmbedViewController.swift in Sources */,
-				CE21D955251B425E000A1A6F /* Background.swift in Sources */,
 				CEFBCB0C2519F9C400341DB9 /* ChangeColorViewController.swift in Sources */,
 				CEA003E525131BCC003ECCF0 /* AppDelegate.swift in Sources */,
 				CEFBCB0A2519F96C00341DB9 /* ColorViewController.swift in Sources */,

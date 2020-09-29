@@ -8,23 +8,32 @@
 
 import UIKit
 
-enum Colors: String {
-    case green = "Выбрать зелёный"
-    case red = "Выбрать красный"
-    case blue = "Выбрать синий"
-}
-
-// метод сопоставления
-func getColor(from buttonName: String) -> String {
+enum Colors: Int {
+    case green = 0
+    case blue = 1
+    case red = 2
+    case yellow = 3
+    case purple = 4
     
-    guard let colorType = Colors(rawValue: buttonName) else {
-        return "Выбран зелёный"
+    var background: UIColor {
+        switch self.rawValue {
+        case 0: return UIColor.systemGreen
+        case 1: return UIColor.systemBlue
+        case 2: return UIColor.systemRed
+        case 3: return UIColor.systemYellow
+        case 4: return UIColor.systemPurple
+        default: return UIColor.white
+        }
     }
     
-    switch colorType {
-    case .green: return "Выбран зелёный"
-    case .red: return "Выбран красный"
-    case .blue: return "Выбран синий"
+    var label: String {
+        switch self.rawValue {
+        case 0: return "зелёный"
+        case 1: return "синий"
+        case 2: return "красный"
+        case 3: return "жёлтый"
+        case 4: return "пурпурный"
+        default: return "зелёный"
+        }
     }
-    
 }

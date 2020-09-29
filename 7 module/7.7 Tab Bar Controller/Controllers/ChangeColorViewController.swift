@@ -25,19 +25,20 @@ class ChangeColorViewController: UIViewController {
         colorTextField.text = settedColor
     }
 
-    @IBAction func buttonPressed(_ sender: UIButton) {
+    @IBAction func changeColor(_ sender: UIButton) {
         
-        // получаем идентификатор кнопки
-        guard let choiseColor = sender.currentTitle else { return }
+        /* получаем значение с сопоставлением:
+         идентификатор кнопки с моделью (Model/Colors) */
+        guard let choiseColor = Colors(rawValue: sender.tag) else { return }
         
-        /* применяем метод сопоставления из модели (Model/Colors),
-         относительно полученного идентификатора кнопки */
-        settedColor = getColor(from: choiseColor)
+        /* присваиваем новое значение цвета, с сопоставлением в модели (Model/Colors),
+         относительно идентификатора кнопки */
+        settedColor = "Выбран \(choiseColor.label)"
         
         // передаём значение выбранного цвета
         delegate?.setColor(settedColor)
         
-        dismiss(animated: true, completion: nil) // close
+        dismiss(animated: true) // close
     }
     
 }
