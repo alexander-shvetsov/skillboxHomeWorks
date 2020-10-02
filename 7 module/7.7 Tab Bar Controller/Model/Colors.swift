@@ -16,24 +16,22 @@ enum Colors: Int {
     case purple = 4
     
     var background: UIColor {
-        switch self.rawValue {
-        case 0: return UIColor.systemGreen
-        case 1: return UIColor.systemBlue
-        case 2: return UIColor.systemRed
-        case 3: return UIColor.systemYellow
-        case 4: return UIColor.systemPurple
-        default: return UIColor.white
+        switch self {
+        case .green: return UIColor.systemGreen
+        case .blue: return UIColor.systemBlue
+        case .red: return UIColor.systemRed
+        case .yellow: return UIColor.systemYellow
+        case .purple: return UIColor.systemPurple
         }
     }
     
     var label: String {
-        switch self.rawValue {
-        case 0: return "зелёный"
-        case 1: return "синий"
-        case 2: return "красный"
-        case 3: return "жёлтый"
-        case 4: return "пурпурный"
-        default: return "зелёный"
+        switch self {
+        case .green: return "Выбран зелёный"
+        case .blue: return "Выбран синий"
+        case .red: return "Выбран красный"
+        case .yellow: return "Выбран жёлтый"
+        case .purple: return "Выбран пурпурный"
         }
     }
 }

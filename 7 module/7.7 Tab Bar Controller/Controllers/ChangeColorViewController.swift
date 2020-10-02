@@ -33,7 +33,7 @@ class ChangeColorViewController: UIViewController {
         
         /* присваиваем новое значение цвета, с сопоставлением в модели (Model/Colors),
          относительно идентификатора кнопки */
-        settedColor = "Выбран \(choiseColor.label)"
+        settedColor = choiseColor.label
         
         // передаём значение выбранного цвета
         delegate?.setColor(settedColor)
